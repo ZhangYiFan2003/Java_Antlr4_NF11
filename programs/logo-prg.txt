@@ -1,0 +1,102 @@
+pour calcArea :radius
+  rends :radius * :radius * 3.14159
+fin
+
+pour drawSquare :size
+  repete 4 [
+    av :size
+    td 90
+  ]
+fin
+
+donne "radius 10
+donne "size 100
+
+fpos 320 320
+av calcArea(:radius)
+td 90
+drawSquare(:size)
+
+si hasard 100 >= 50 [
+  av 100
+] [
+  td 180
+  av 100
+]
+
+pour drawFlower :petalSize :petalCount
+    repete :petalCount [
+        repete 90 [
+            av :petalSize
+            td 4
+        ]
+        td 360 / :petalCount  
+    ]
+fin
+
+fpos 250 250
+donne "petalSize 2  
+donne "petalCount 12  
+drawFlower :petalSize :petalCount
+
+
+fpos 250 250
+fcc 2
+td 90
+bc
+av 100 
+td 90 
+av 50 
+td 90
+av 100
+td 90 
+av 50 
+
+
+td 45 
+av 35 
+td 90 
+av 35 
+
+fpos 275 250 
+td 90 
+av 20 
+td 90 
+av 10 
+td 90
+av 20
+td 90 
+av 10 
+
+
+lc 
+
+
+
+fpos 250 250
+av (100 - 5) 
+
+fpos 350 250
+av (50 / 5)
+
+fpos 150 150
+av (20 + 30 - 10) 
+
+fpos 200 200
+av (10 * 5 / 2)
+
+fpos 300 300
+av ((50 + 50) / 2) 
+
+
+
+fpos 100 100
+av ((10 + 5) * 2) 
+fpos 200 200
+av (100 / (5 + 5)) 
+
+fpos 300 300
+av ((20 - 5) * (2 + 3)) 
+
+// Tests 
+
